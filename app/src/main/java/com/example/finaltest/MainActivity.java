@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-        drawerView = (View)findViewById(R.id.drawer);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerView = (View) findViewById(R.id.drawer);
 
         drawerLayout.setDrawerListener(listener);
         drawerView.setOnTouchListener(new View.OnTouchListener() {
@@ -48,44 +48,39 @@ public class MainActivity extends AppCompatActivity {
 
     OnClickListener click = new OnClickListener() {
         public void onClick(View v) {
-            if(v == button_home) {
+            if (v == button_home) {
                 Intent intent = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(intent);
-            }
-            else if(v == button_gallery) {
+            } else if (v == button_gallery) {
                 Intent intent = new Intent(MainActivity.this, GalleryActivity.class);
                 startActivity(intent);
-            }
-            else if(v == button_halla) {
+            } else if (v == button_halla) {
                 if (button_university.getVisibility() == View.GONE) {
                     button_university.setVisibility(View.VISIBLE);
                     button_ice.setVisibility(View.VISIBLE);
                     button_map.setVisibility(View.VISIBLE);
-                }
-                else if (button_university.getVisibility() == View.VISIBLE) {
+                } else if (button_university.getVisibility() == View.VISIBLE) {
                     button_university.setVisibility(View.GONE);
                     button_ice.setVisibility(View.GONE);
                     button_map.setVisibility(View.GONE);
                 }
-            }
-            else if(v == button_map) {
+            } else if (v == button_map) {
                 Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(intent);
-            }
-            else if(v == button_close) {
+            } else if (v == button_close) {
                 drawerLayout.closeDrawers();
             }
         }
     };
 
     public void inputButton() {
-        button_home = (Button)findViewById(R.id.btn_home);
-        button_gallery = (Button)findViewById(R.id.btn_gallery);
-        button_halla = (Button)findViewById(R.id.btn_halla);
-        button_close = (Button)findViewById(R.id.btn_close);
-        button_university = (Button)findViewById(R.id.btn_university);
-        button_ice = (Button)findViewById(R.id.btn_ice);
-        button_map = (Button)findViewById(R.id.btn_map);
+        button_home = (Button) findViewById(R.id.btn_home);
+        button_gallery = (Button) findViewById(R.id.btn_gallery);
+        button_halla = (Button) findViewById(R.id.btn_halla);
+        button_close = (Button) findViewById(R.id.btn_close);
+        button_university = (Button) findViewById(R.id.btn_university);
+        button_ice = (Button) findViewById(R.id.btn_ice);
+        button_map = (Button) findViewById(R.id.btn_map);
 
         button_home.setOnClickListener(click);
         button_gallery.setOnClickListener(click);
