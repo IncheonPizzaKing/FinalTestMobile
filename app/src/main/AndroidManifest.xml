@@ -31,9 +31,6 @@
         <activity
             android:name="InputGallery"
             android:label="InputGallery"/>
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBa4mg_G3F1CgZ1S4n4VAGjysD7as57yCk"/>
     </application>
 
 </manifest>
